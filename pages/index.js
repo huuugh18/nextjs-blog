@@ -4,18 +4,18 @@ import utilStyles from '../styles/utils.module.css'
 import { getSortedPostsData } from '../lib/posts'
 import Link from 'next/link'
 import Date from '../components/date'
-// import { getSortedQuotes } from "../lib/quotes";
+import Subscribe from '../components/subscribe'
 
 export default function Home({ allPostsData, quotes }) {
-   // if (quotes.length < 1) {
-   //    quotes = [{}]
-   // }
    console.log({ allPostsData, quotes })
    return (
       <Layout home>
          <Head>
             <title>{siteTitle}</title>
          </Head>
+         <main>
+            <Subscribe />
+         </main>
          <section className={utilStyles.headingMd}>
             <p>
                Hey this is the home site of the Riverhawks. Welcome. Hope you

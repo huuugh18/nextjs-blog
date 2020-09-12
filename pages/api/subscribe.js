@@ -9,8 +9,8 @@ const listId = process.env.MAILCHIMP_AUDIENCE_ID
 
 
 export default async(req, res) => {
-   const email = 'testuser1@testing.com';
-   // const { email } = req.body;
+   // const email = 'testuser1@testing.com';
+   const { email } = req.body;
    if(!email) {
       return res.status(400).json({ error: 'Email is equired' });
    }
